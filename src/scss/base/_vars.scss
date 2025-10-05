@@ -1,0 +1,27 @@
+$maxWidth: 1230;
+$containerWidth: 1200px;
+$containerPadding: 15px;
+$fontMain: sans-serif;
+$fontAccent: 'Manrope', sans-serif;
+$fontTitles: $fontAccent;
+$pageBg: #fff;
+$textColor: #000;
+$accent: #ac182c;
+$linkColor: #2578c8;
+
+
+.dark {
+    $pageBg: #252526;
+    $textColor: #fff;
+}
+
+// font-weight:
+// 100 - thin
+// 200 - UltraLite
+// 300 - lite
+// 400 - normal
+// 500 - medium
+// 600 - semibold
+// 700 - bold
+// 800 - Heavy
+// 900 - black

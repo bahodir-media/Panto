@@ -1,0 +1,84 @@
+.container {
+	margin: 0 auto;
+	padding: 0 $containerPadding;
+	max-width: $maxWidth + px;
+	width: 100%;
+}
+
+.container-full {
+	padding: 0 $containerPadding;
+	max-width: 100%;
+}
+
+.container-left-50 {
+	padding: 0 $containerPadding;
+	max-width: 50%;
+
+	@include sm-block {
+		max-width: 100%;
+	}
+}
+
+.container-right-50 {
+	padding: 0 $containerPadding;
+	max-width: 50%;
+	margin-left: auto;
+
+	@include sm-block {
+		max-width: 100%;
+	}
+}
+
+.container-right {
+	padding-left: calc(
+		(100% - $containerWidth) / 2 + $containerPadding
+	);
+
+	@include md-block {
+		padding-left: $containerPadding;
+	}
+}
+
+.container-left {
+	padding-right: calc(
+		(100% - $containerWidth) / 2 + $containerPadding
+	);
+
+	@include md-block {
+		padding-right: $containerPadding;
+	}
+}
+
+.container-half-left {
+	padding-right: calc(
+		(100% - $containerWidth) / 2 + ($containerWidth / 2)
+	);
+	padding-left: calc(
+		(100% - $containerWidth) / 2 + $containerPadding
+	);
+
+	@include md-block {
+		padding-left: $containerPadding;
+	}
+
+	@include sm-block {
+		padding: 0 $containerPadding;
+	}
+}
+
+.container-half-right {
+	padding-left: calc(
+		(100% - $containerWidth) / 2 + ($containerWidth / 2)
+	);
+	padding-right: calc(
+		(100% - $containerWidth) / 2 + $containerPadding
+	);
+
+	@include md-block {
+		padding-right: $containerPadding;
+	}
+
+	@include sm-block {
+		padding: 0 $containerPadding;
+	}
+}

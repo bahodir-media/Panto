@@ -1,0 +1,33 @@
+:root {
+  --size: 75px;
+  --clr-bg: #272324;
+  --clr1: #bbbb88;
+  --clr2: #ccc68d;
+  --clr3: #eedd99;
+  --clr4: #eec290;
+  --clr5: #eeaa88;
+}
+
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--clr-bg);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
+}
+
+@import './styles/preloader-style-4';
