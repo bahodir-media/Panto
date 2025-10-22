@@ -81,41 +81,61 @@ gulp.task('fontsStyle', (done) => {
 	}
 
 	const allFonts = getAllFonts(fontsDir);
+	if (!allFonts.length) return done();
 
 	fs.writeFileSync(fontsFile, ''); // clear file
 	const added = new Set();
 
 	allFonts.forEach((fontPath) => {
-		const fileName = fontPath.split('/').pop().split('.')[0];
-		if (added.has(fileName)) return; // skip duplicates
+		// remove extension to avoid .woff.woff2 duplication
+		const fileBase = fontPath.replace(/\.(woff2|woff)$/i, '');
+		const fileName = fileBase.split('/').pop(); // e.g. Gilroy-BoldItalic
+		if (added.has(fileName)) return;
 		added.add(fileName);
 
-		let [fontName, fontWeight] = fileName.split('-');
-		if (!fontWeight) fontWeight = 'regular';
+		let fontName = fileName.split('-')[0] || fileName;
+		let descriptor = fileName.replace(fontName, '').replace(/^-/, '').toLowerCase();
 
+		// detect italic/oblique style
+		let fontStyle = 'normal';
+		if (/italic|oblique/.test(descriptor)) {
+			fontStyle = 'italic';
+			descriptor = descriptor.replace(/italic|oblique/, '');
+		}
+
+		// map weights
 		const weightMap = {
 			thin: 100,
 			extralight: 200,
+			ultralight: 200,
 			light: 300,
 			regular: 400,
+			normal: 400,
 			medium: 500,
 			semibold: 600,
+			demibold: 600,
 			bold: 700,
 			extrabold: 800,
+			ultrabold: 800,
 			heavy: 800,
 			black: 900,
 		};
-		const weight = weightMap[fontWeight.toLowerCase()] || 400;
+
+		const weightKey = descriptor.replace(/[^a-z]/g, '');
+		const fontWeight = weightMap[weightKey] || 400;
+
+		const srcWoff2 = `../fonts/${fileBase}.woff2`.replace(/\\/g, '/');
+		const srcWoff = `../fonts/${fileBase}.woff`.replace(/\\/g, '/');
 
 		fs.appendFileSync(
 			fontsFile,
-			`@font-face {\n\tfont-family: '${fontName}';\n\tfont-display: swap;\n\tsrc: url("../fonts/${fontPath.replace(
-				/\\/g,
-				'/'
-			)}.woff2") format("woff2"), url("../fonts/${fontPath.replace(
-				/\\/g,
-				'/'
-			)}.woff") format("woff");\n\tfont-weight: ${weight};\n\tfont-style: normal;\n}\n\n`
+			`@font-face {\n` +
+			`\tfont-family: '${fontName}';\n` +
+			`\tfont-display: swap;\n` +
+			`\tsrc: url("${srcWoff2}") format("woff2"), url("${srcWoff}") format("woff");\n` +
+			`\tfont-weight: ${fontWeight};\n` +
+			`\tfont-style: ${fontStyle};\n` +
+			`}\n\n`
 		);
 	});
 

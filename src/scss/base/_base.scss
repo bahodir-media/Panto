@@ -5,9 +5,8 @@ html {
 }
 
 body {
-	background-color: var(--page-bg);
-	color: var(--text-color);
-	font-family: var(--font-main);
+	color: $text-color;
+	font-family: $font-main;
 	text-wrap: balance;
 }
 
@@ -16,7 +15,7 @@ img {
 }
 
 a {
-	color: var(--link-color);
+	color: $accent;
 }
 
 code {
@@ -35,8 +34,8 @@ pre.code {
 .totop {
 	width: 45px;
 	height: 45px;
-	background-color: var(--accent);
-	color: var(--text-white);
+	background-color: $accent;
+	color: $header-text-color;
 	display: none;
 	justify-content: center;
 	align-items: center;

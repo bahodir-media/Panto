@@ -1,0 +1,25 @@
+.nav {
+	display: grid;
+	grid-template-columns: 2fr 8fr 2fr;
+	gap: 20px;
+}
+
+.nav__logo {
+	align-self: center;
+	font-size: 28px;
+	text-transform: capitalize;
+	font-weight: 700;
+	line-height: normal;
+	letter-spacing: 0.28px;
+}
+
+.nav-list {
+	align-self: center;
+	justify-self: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 65px;
+	font-weight: 500;
+	font-size: 18px;
+}

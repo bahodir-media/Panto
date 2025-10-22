@@ -4,6 +4,12 @@
 	}
 }
 
+@mixin retinaBg() {
+	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+		@content;
+	}
+}
+
 @mixin adaptive-font($pcSize, $mobSize) {
 	$addSize: $pcSize - $mobSize;
 	$maxWidth: $maxWidth - 320;
