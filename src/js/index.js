@@ -14,8 +14,4 @@
 //scrollReveal();
 
 import {initHints} from './modules/hints.js';
-
-document.addEventListener('DOMContentLoaded', () => {
-	initHints();
-});
-
+initHints();
