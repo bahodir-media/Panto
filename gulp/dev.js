@@ -55,7 +55,7 @@ gulp.task('html:dev', function () {
 			'!./src/html/docs/**/*.*',
 		])
 		.pipe(changed('./build/', { hasChanged: changed.compareContents }))
-		.pipe(plumber(plumberNotify('HTML')))
+		//.pipe(plumber(plumberNotify('HTML')))
 		.pipe(fileInclude(fileIncludeSetting))
 		.pipe(
 			replace(
@@ -98,7 +98,7 @@ gulp.task('sass:dev', function () {
 	return gulp
 		.src('./src/scss/*.scss')
 		.pipe(changed('./build/css/'))
-		.pipe(plumber(plumberNotify('SCSS')))
+		//.pipe(plumber(plumberNotify('SCSS')))
 		.pipe(sourceMaps.init())
 		.pipe(sassGlob())
 		.pipe(sass())
@@ -199,7 +199,7 @@ gulp.task('js:dev', function () {
 	return gulp
 		.src('./src/js/*.js')
 		.pipe(changed('./build/js/'))
-		.pipe(plumber(plumberNotify('JS')))
+		//.pipe(plumber(plumberNotify('JS')))
 		// .pipe(babel())
 		.pipe(webpack(require('./../webpack.config.js')))
 		.pipe(gulp.dest('./build/js/'));

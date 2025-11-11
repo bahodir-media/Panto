@@ -8,7 +8,15 @@ body {
 	color: $text-color;
 	font-family: $font-main;
 	text-wrap: balance;
-	padding-bottom: 50vh;
+}
+
+.logo {
+	font-size: 28px;
+	text-transform: capitalize;
+	font-weight: 700;
+	line-height: normal;
+	letter-spacing: 0.28px;
+	color: #fff !important; 
 }
 
 img {

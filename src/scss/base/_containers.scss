@@ -2,7 +2,10 @@
 	margin: 0 auto;
 	padding: 0 $containerPadding;
 	max-width: $maxWidth + px;
-	// width: 100%;
+}
+
+.container--small {
+	max-width: 1094px;
 }
 
 .container-full {

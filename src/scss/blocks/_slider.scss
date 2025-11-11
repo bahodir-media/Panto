@@ -1,0 +1,27 @@
+.slider {
+	position: relative;
+}
+
+.slider__btn {
+	position: absolute;
+	z-index: 3;
+	top: 50%;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: #fff;
+	box-shadow: 0px 7.03px 19.53px 0px rgba(0, 0, 0, 0.06);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.slider__btn--prev {
+	left: 0;
+	transform: translate(-50%, -50%);
+}
+
+.slider__btn--next {
+	right: 0;
+	transform: translate(50%, -50%);
+}

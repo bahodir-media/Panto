@@ -1,0 +1,96 @@
+.card {
+	position: relative;
+	width: 268px;
+	font-family: $font-cards;
+}
+
+.card__link {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.card__photo {
+	display: flex;
+	height: 240px;
+	background-color: #fafafa;
+	border-radius: 20px 20px 0 0;
+	text-align: center;
+	margin-top: 50px;
+}
+
+.card__img {
+	margin-top: -50px;
+}
+
+.card__desc {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	height: 202px;
+	padding: 14px 22px 28px;
+	background-color: #fff;
+	border-radius: 0 0 20px 20px;
+}
+
+.card__category {
+	position: relative;
+	z-index: 3;
+	color: $text-muted;
+	font-size: 16.76px;
+	line-height: 100%;
+}
+
+.card__title {
+	color: $text-card-dark-blue;
+	font-weight: 600;
+	font-size: 21.33px;
+	text-transform: capitalize;
+}
+
+.card__rating {
+	display: flex;
+	flex-direction: row;
+	gap: 3px;
+}
+
+.card__footer {
+	margin-top: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.card__price {
+	display: flex;
+	align-items: flex-start;
+	gap: 3px;
+	color: $text-card-dark-blue;
+	font-weight: 600;
+	font-size: 21.33px;
+
+	&::before {
+		content: attr(data-value);
+		font-size: 15.2px;
+	}
+}
+
+.card__btn {
+	position: relative;
+	z-index: 3;
+	width: 48px;
+	height: 48px;
+	background-color: $ui-dark-blue;
+	border-radius: 50%;
+	font-size: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: opacity 0.2s ease-in;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
