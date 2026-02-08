@@ -11,12 +11,12 @@ body {
 }
 
 .logo {
-	font-size: 28px;
+	font-size: clamp(18px, 0.946rem + 0.89vw, 28px);
 	text-transform: capitalize;
 	font-weight: 700;
 	line-height: normal;
 	letter-spacing: 0.28px;
-	color: #fff !important; 
+	color: #fff !important;
 }
 
 img {
@@ -38,6 +38,11 @@ pre.code {
 	background-color: #e9f1f6;
 	padding: 1rem;
 	border-radius: 4px;
+}
+
+.title-2 {
+	font-size: clamp(32px, 1.702rem + 1.49vw, 42px);
+	font-weight: 700;
 }
 
 .totop {

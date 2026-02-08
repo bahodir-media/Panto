@@ -1,11 +1,11 @@
-//import mobileNav from './modules/mobile-nav.js';
-// mobileNav();
+import mobileNav from './modules/mobile-nav.js';
+mobileNav();
 
-//import preloader from './modules/preloader.js';
-// preloader();
+import preloader from './modules/preloader.js';
+preloader();
 
-// import toTop from './modules/toTop.js';
-// toTop(); 
+import toTop from './modules/toTop.js';
+toTop();
 
 import swiperFunc from './modules/swiper-slides.js';
 const swiper = swiperFunc(); // store the instance

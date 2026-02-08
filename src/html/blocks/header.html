@@ -1,21 +1,33 @@
 <header class="header">
 	<div class="container">
-		<div class="header__nav">
-			<nav class="nav">
-				<div class="nav__logo">
-					<a href="#" class="logo">Panto</a>
-				</div>
-				<ul class="nav-list">
-					<li class="nav-list__item"><a href="#" class="nav-list__link">Furniture</a></li>
-					<li class="nav-list__item"><a href="#" class="nav-list__link">Shop</a></li>
-					<li class="nav-list__item"><a href="#" class="nav-list__link">About Us</a></li>
-					<li class="nav-list__item"><a href="#" class="nav-list__link">Contact</a></li>
-				</ul>
-				<a href="#" class="cart">
-					<img class="cart__img" src="./../../img/icons/cart.svg" alt="">
-					<div class="cart__count">0</div>
-				</a>
-			</nav>
+		<div class="header__nav nav">
+
+			<div class="nav__logo">
+				<a href="#" class="logo">Panto</a>
+			</div>
+			<ul class="nav-list">
+				<li class="nav-list__item">
+					<a href="#" class="nav-list__link nav-list__link--dropdown">Furniture</a>
+					<div class="nav-list__sub-nav">
+						<ul class="sub-nav">
+							<li class="sub-nav__item"><a href="" class="sub-nav__link">Sofa</a></li>
+							<li class="sub-nav__item"><a href="" class="sub-nav__link">Beds</a></li>
+							<li class="sub-nav__item"><a href="" class="sub-nav__link">Chairs</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="nav-list__item"><a href="#" class="nav-list__link">Shop</a></li>
+				<li class="nav-list__item"><a href="#" class="nav-list__link">About Us</a></li>
+				<li class="nav-list__item"><a href="#" class="nav-list__link">Contact</a></li>
+			</ul>
+			<a href="#" class="cart">
+				<img class="cart__img" src="./../../img/icons/cart.svg" alt="">
+				<div class="cart__count">0</div>
+			</a>
+
+			<button id="open-mobile-nav-btn" class="nav__btn">
+				<img src="../../img/icons/mobile-nav.svg" alt="">
+			</button>
 		</div>
 		<div class="header__content">
 			<h1 class="header__title">Make your interior more minimalistic & modern</h1>
@@ -31,7 +43,7 @@
 
 		</div>
 
-		<div class="header__dot-sofa">
+		<div class="header__dot header__dot--sofa">
 			<button class="info-dot">
 				<div class="info-dot__circle"></div>
 				<div class="info-dot__radius"></div>
@@ -53,7 +65,7 @@
 				</label>
 			</div>
 		</div>
-		<div class="header__dot-vase">
+		<div class="header__dot header__dot--vase">
 			<button class="info-dot">
 				<div class="info-dot__circle"></div>
 				<div class="info-dot__radius"></div>
@@ -75,7 +87,7 @@
 				</label>
 			</div>
 		</div>
-		<div class="header__dot-item">
+		<div class="header__dot header__dot--item">
 			<button class="info-dot">
 				<div class="info-dot__circle"></div>
 				<div class="info-dot__radius"></div>
@@ -97,7 +109,7 @@
 				</label>
 			</div>
 		</div>
-		<div class="header__dot-wall">
+		<div class="header__dot header__dot--wall">
 			<button class="info-dot">
 				<div class="info-dot__circle"></div>
 				<div class="info-dot__radius"></div>

@@ -4,6 +4,11 @@
 	padding: 6px;
 	border-radius: 44px;
 	background-color: #eeeeee;
+
+	@include xs-block {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 }
 
 .tab-controls__btn {

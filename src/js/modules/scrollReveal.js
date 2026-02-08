@@ -7,7 +7,7 @@ ScrollReveal({
 	// reset: true,
 });
 
-function scrollRevealFunc () {
+function scrollRevealFunc() {
 	ScrollReveal().reveal(`.header, .partners`, {
 		distance: '0px',
 		opacity: 0,

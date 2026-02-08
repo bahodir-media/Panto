@@ -26,11 +26,7 @@ function productTabs(swiper) {
 						product.classList.add('none');
 					}
 				}
-
-
-
 			}
-
 			if (swiper) swiper.update();
 		})
 	}

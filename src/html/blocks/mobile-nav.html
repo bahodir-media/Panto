@@ -1,5 +1,28 @@
-<div class="mobile-nav">
-	<ul class="mobile-nav__list">
-		<li><a href="index.html">Home</a></li>
+<div class="mobile-nav-wrapper">
+
+	<div class="mobile-nav-header">
+		<a href="#" class="mobile-cart">
+			<div class="cart">
+				<img class="cart__img" src="./../../img/icons/cart.svg" alt="">
+				<div class="cart__count">0</div>
+			</div>
+			Cart
+		</a>
+		<button id="close-mobile-nav-btn" class="mobile-nav-btn-close"><img src="./../../img/icons/close.svg"
+				alt=""></button>
+	</div>
+
+	<ul class="mobile-nav">
+		<li class="mobile-nav__item">
+			<a href="#" class="mobile-nav__link mobile-nav__link--dropdown">Furniture</a>
+			<ul class="mobile-sub-nav">
+				<li class="mobile-sub-nav__item"><a href="" class="mobile-sub-nav__link">Sofa</a></li>
+				<li class="mobile-sub-nav__item"><a href="" class="mobile-sub-nav__link">Beds</a></li>
+				<li class="mobile-sub-nav__item"><a href="" class="mobile-sub-nav__link">Chairs</a></li>
+			</ul>
+		</li>
+		<li class="mobile-nav"><a href="#" class="mobile-nav__link">Shop</a></li>
+		<li class="mobile-nav"><a href="#" class="mobile-nav__link">About Us</a></li>
+		<li class="mobile-nav"><a href="#" class="mobile-nav__link">Contact</a></li>
 	</ul>
 </div>

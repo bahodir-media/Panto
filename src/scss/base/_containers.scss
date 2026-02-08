@@ -33,9 +33,7 @@
 }
 
 .container-right {
-	padding-left: calc(
-		(100% - $containerWidth) / 2 + $containerPadding
-	);
+	padding-left: calc((100% - $containerWidth) / 2 + $containerPadding);
 
 	@include md-block {
 		padding-left: $containerPadding;
@@ -43,9 +41,7 @@
 }
 
 .container-left {
-	padding-right: calc(
-		(100% - $containerWidth) / 2 + $containerPadding
-	);
+	padding-right: calc((100% - $containerWidth) / 2 + $containerPadding);
 
 	@include md-block {
 		padding-right: $containerPadding;
@@ -53,12 +49,8 @@
 }
 
 .container-half-left {
-	padding-right: calc(
-		(100% - $containerWidth) / 2 + ($containerWidth / 2)
-	);
-	padding-left: calc(
-		(100% - $containerWidth) / 2 + $containerPadding
-	);
+	padding-right: calc((100% - $containerWidth) / 2 + ($containerWidth / 2));
+	padding-left: calc((100% - $containerWidth) / 2 + $containerPadding);
 
 	@include md-block {
 		padding-left: $containerPadding;
@@ -70,12 +62,8 @@
 }
 
 .container-half-right {
-	padding-left: calc(
-		(100% - $containerWidth) / 2 + ($containerWidth / 2)
-	);
-	padding-right: calc(
-		(100% - $containerWidth) / 2 + $containerPadding
-	);
+	padding-left: calc((100% - $containerWidth) / 2 + ($containerWidth / 2));
+	padding-right: calc((100% - $containerWidth) / 2 + $containerPadding);
 
 	@include md-block {
 		padding-right: $containerPadding;
