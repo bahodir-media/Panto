@@ -1,5 +1,5 @@
 /* Base */
-@import './base/reset';
+
 @import './base/vars';
 @import './base/preloader/_preloader-main';
 @import './base/mixins';
@@ -8,6 +8,7 @@
 @import './base/utils'; // Тест на ошибку
 @import './base/containers';
 @import './base/sticky-footer';
+@import './base/reset';
 
 /* Blocks */
 @import './blocks/**/*.scss';

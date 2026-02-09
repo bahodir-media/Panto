@@ -20,4 +20,4 @@ Build a version for publication:
 gulp docs
 ```
 
-[Watch the demo](https://bahodir-media.github.io/repo/)
+[Watch the demo](https://bahodir-media.github.io/Panto/)
